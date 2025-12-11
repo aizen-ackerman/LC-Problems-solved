@@ -45,6 +45,48 @@ class Solution {
 }
 ```
 ---
+## 344. Reverse a String
+Write a function that reverses a string. The input string is given as an array of characters s.
+
+**Example :**
+```
+Example 1:
+
+Input: s = ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
+Example 2:
+
+Input: s = ["H","a","n","n","a","h"]
+Output: ["h","a","n","n","a","H"]
+```
+
+**Code :**
+```
+import java.util.*;
+class Solution {
+    public void reverseString(char[] s) {
+        int t = 0;
+        int e = s.length-1;
+        while(t<s.length/2){
+            char temp = s[t];
+            s[t] = s[e];
+            s[e] = temp;
+            t++;
+            e--;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        char ch[] = s.toCharArray();
+        reverseString(ch);
+        for(int i=0;i<ch.length;i++){
+            System.out.print(ch[i]);
+        }
+    }
+}
+```
+---
 ## 938. Range Sum of BST
 
 **Problem Statement**
