@@ -83,7 +83,17 @@ public class Main {
 }
 ```
 ---
+### [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
+Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
+
+**Example :**
+```
+```
+
+**Code :**
+```
+```
 ### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 Given head, the head of a linked list, determine if the linked list has a cycle in it.
