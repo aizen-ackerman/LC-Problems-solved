@@ -89,10 +89,40 @@ Given an unsorted array of integers nums, return the length of the longest conse
 
 **Example :**
 ```
+Example 1:
+
+Input: nums = [100,4,200,1,3,2]
+Output: 4
+Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 ```
 
 **Code :**
 ```
+class Solution {
+    public int longestConsecutive(int[] arr) {
+        if(arr.length==0)   return 0;
+        Arrays.sort(arr);
+        int n = 1;
+        int i=0;
+        int max = n;
+        while(i<arr.length-1){
+            if (arr[i]==arr[i+1]-1){
+                n++;
+                i++;
+            }
+            else if(arr[i]==arr[i+1]){
+                i++;
+            }
+            else{
+                max = Math.max(max,n);
+                n=1;
+                i++;
+            }
+        }
+        max = Math.max(max,n);
+        return max;
+    }
+}
 ```
 ### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
