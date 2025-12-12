@@ -211,6 +211,50 @@ class Solution {
     }
 }
 ```
+
+### [326. Power of Three](https://leetcode.com/problems/power-of-three/)
+
+Given an integer n, return true if it is a power of three. Otherwise, return false.
+
+An integer n is a power of three, if there exists an integer x such that n == 3x.
+
+**Example :**
+
+```
+Example 1:
+
+Input: n = 27
+Output: true
+Explanation: 27 = 33
+Example 2:
+
+Input: n = 0
+Output: false
+Explanation: There is no x where 3x = 0.
+```
+
+**Code :**
+```
+import java.util.*;
+class Solution {
+    public boolean isPowerOfThree(int n) {
+        if (n <= 0) return false;
+        if (n == 1) return true;
+        if (n % 3 != 0) return false;
+        return isPowerOfThree(n / 3);
+    }
+    public static void main(String ssfdf[]){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(isPowerOfThree){
+            System.out.print("The given number is a power of three");
+        }
+        else{
+            System.out.print("The given number is not a power of three");
+        }
+    }
+}
+```
 ---
 ### [344. Reverse a String](https://leetcode.com/problems/reverse-string/)
 
