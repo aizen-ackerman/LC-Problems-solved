@@ -1,5 +1,49 @@
 # Leetcode Problems Solved from Scratch
 
+## [26. Remove Duplicate Elements](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
+
+Consider the number of unique elements in nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements k.
+
+The first k elements of nums should contain the unique numbers in sorted order. The remaining elements beyond index k - 1 can be ignored.
+
+**Example :**
+
+```
+Example 1:
+
+Input: nums = [1,1,2]
+Output: 2, nums = [1,2,_]
+```
+
+**Code :**
+```
+class Solution {
+    public int removeDuplicates(int[] n) {
+        int a = 1;
+        for(int i=0;i<n.length;i++){
+            if(n[a-1]!=n[i]){
+                n[a] = n[i];
+                a++;
+            }
+        }
+        return a;
+    }
+    public static void main(String asf[]){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+        }
+        int n = removeDuplicates(arr);
+        System.out.println(n);
+    }
+}
+```
+---
+
 ### [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 
 A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. 
@@ -86,7 +130,7 @@ public class Solution {
     }
 }
 ```
-
+---
 ### [167. Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
 Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
@@ -131,7 +175,7 @@ class Solution {
     }
 }
 ```
-
+---
 ### [283. Move Zeros](https://leetcode.com/problems/move-zeroes/description/)
 
 Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
